@@ -22,3 +22,6 @@ rm -rf ./VeraCrypt
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
+
+# test the final app
+quick-sharun --test ./dist/*.AppImage
