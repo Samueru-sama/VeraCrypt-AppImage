@@ -20,6 +20,9 @@ git clone --depth 1 https://github.com/veracrypt/VeraCrypt.git ./VeraCrypt
 cp -v ./VeraCrypt/Translations/* ./AppDir/share/veracrypt/languages
 rm -rf ./VeraCrypt
 
+# the app may check for $APPDIR/usr instead of the patched prefix
+ln -s . ./AppDir/usr
+
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
 
